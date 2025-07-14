@@ -4,8 +4,6 @@ import Features from './components/Features';
 import Products from './components/Products';
 import Cart from './components/Cart';
 import Contact from './components/Contact';
-
-
 import { Routes, Route, Link } from 'react-router-dom';
 
 
@@ -99,6 +97,7 @@ function App() {   // You created a cartItems state
                     } />
                     <Route path="/contact" element={<Contact />} />
                   </Routes>
+
                 </div>
               );
             }

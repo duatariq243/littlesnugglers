@@ -5,9 +5,9 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render( //<BrowserRouter>	Enables React Router in the app
- <BrowserRouter basename="/littlesnugglers">
-  <App />
-</BrowserRouter>
+root.render(
+  <BrowserRouter basename="/littlesnugglers">
+    <App />
+  </BrowserRouter>
 
 );
