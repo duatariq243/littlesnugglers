@@ -1,0 +1,21 @@
+.products {
+    padding: 60px 80px;
+    background-color: #fefefe;
+    text-align: center;
+  }
+  
+  .product-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .search-bar {  
+    padding: 10px 16px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    width: 50%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
