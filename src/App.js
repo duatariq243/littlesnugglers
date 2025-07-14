@@ -62,44 +62,53 @@ function App() {   // You created a cartItems state
  
   
   
-  return (   //<Routes>	Contains all your route definitions
-              //<Route>	Defines URL path and what to render there
-              //<Link>	Navigation links that don’t reload the page
-             
-                <div className="App">
-                  {/* 🌟 Navbar */}
-                  <nav className="navbar">
-                    <div className="navbar-left">
-                      <Link to="/" className="nav-link">Home</Link>
-                      <Link to="/products" className="nav-link">Products</Link>
-                    </div>
-            
-                    <div className="navbar-center">
-                      <Link to="/" className="nav-logo">Little Snuggles</Link>
-                    </div>
-            
-                    <div className="navbar-right">
-                      <Link to="/cart" className="nav-link">Cart ({cartItems.length})</Link>
-                      <Link to="/contact" className="nav-link">Contact</Link>
-                    </div>
-                  </nav>
-            
-                  {/* 🌟 Routing Logic */}
-                  <Routes>
-                    <Route path="/" element={<><Hero /><Features /></>} />
-                    <Route path="/products" element={<Products onAddToCart={handleAddToCart} />} />
-                    <Route path="/cart" element={
-                      <Cart
-                        cartItems={cartItems}
-                        onRemove={handleRemoveFromCart}
-                        onUpdateQuantity={handleUpdateQuantity}
-                      />
-                    } />
-                    <Route path="/contact" element={<Contact />} />
-                  </Routes>
+  return (
+  <>
+    <div className="App">
+      {/* 🌟 Navbar */}
+      <nav className="navbar">
+        <div className="navbar-left">
+          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/products" className="nav-link">Products</Link>
+        </div>
 
-                </div>
-              );
+        <div className="navbar-center">
+          <Link to="/" className="nav-logo">Little Snuggles</Link>
+        </div>
+
+        <div className="navbar-right">
+          <Link to="/cart" className="nav-link">Cart ({cartItems.length})</Link>
+          <Link to="/contact" className="nav-link">Contact</Link>
+        </div>
+      </nav>
+
+      {/* 🌟 Routing Logic */}
+      <Routes>
+        <Route path="/" element={<><Hero /><Features /></>} />
+        <Route path="/products" element={<Products onAddToCart={handleAddToCart} />} />
+        <Route path="/cart" element={
+          <Cart
+            cartItems={cartItems}
+            onRemove={handleRemoveFromCart}
+            onUpdateQuantity={handleUpdateQuantity}
+          />
+        } />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </div>
+
+    <div>
+      <h1>Hello Dua 👋</h1>
+      <p>Your app is running perfectly!</p>
+    </div>
+
+    <div>
+      <h2>Product Section</h2>
+      <p>More content here...</p>
+    </div>
+  </>
+);
+
             }
 
 export default App;
