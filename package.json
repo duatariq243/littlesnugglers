@@ -1,6 +1,7 @@
 {
   "name": "ecommerce-app",
-  "homepage": "https://duatariq243.github.io/littlesnugglers",
+ "homepage": "https://duatariq243.github.io/littlesnugglers"
+,
   "version": "0.1.0",
   "private": true,
   "dependencies": {
