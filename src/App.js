@@ -97,15 +97,7 @@ function App() {   // You created a cartItems state
       </Routes>
     </div>
 
-    <div>
-      <h1>Hello Dua 👋</h1>
-      <p>Your app is running perfectly!</p>
-    </div>
-
-    <div>
-      <h2>Product Section</h2>
-      <p>More content here...</p>
-    </div>
+   
   </>
 );
 
