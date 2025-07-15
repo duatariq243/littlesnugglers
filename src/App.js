@@ -6,6 +6,12 @@ import Cart from './components/Cart';
 import Contact from './components/Contact';
 import { Routes, Route, Link } from 'react-router-dom';
 
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+import CheckoutPage from './components/CheckoutPage';
+
+const stripePromise = loadStripe('pk_test_51N5uDWHSxUStshEgfzgIF8MEfjLuZwJ2xhzuqVGIjUafr0HN8lAZxfaLKE04UuYelW75Ob0aR6Y4LvD4fEDN51KG00VBtX8IUo');
+
 
 
 function App() {   // You created a cartItems state
@@ -13,6 +19,8 @@ function App() {   // You created a cartItems state
     const [cartItems, setCartItems] = useState(() => {  //useState(() => {...})	Lazy initialize from localStorage on first load
         // Load initial cart from localStorage or empty array
       const savedCart = localStorage.getItem('cartItems');
+
+       
          return savedCart ? JSON.parse(savedCart) : [];
           });
 
@@ -63,6 +71,8 @@ function App() {   // You created a cartItems state
   
   
   return (
+
+     
   <>
     <div className="App">
       {/* 🌟 Navbar */}
@@ -73,7 +83,10 @@ function App() {   // You created a cartItems state
         </div>
 
         <div className="navbar-center">
-          <Link to="/" className="nav-logo">Little Snuggles</Link>
+          <Link to="/" className="nav-logo">
+         
+             Little Snuggles
+         </Link>
         </div>
 
         <div className="navbar-right">
@@ -83,9 +96,11 @@ function App() {   // You created a cartItems state
       </nav>
 
       {/* 🌟 Routing Logic */}
+       <Elements stripe={stripePromise}>
       <Routes>
         <Route path="/" element={<><Hero /><Features /></>} />
         <Route path="/products" element={<Products onAddToCart={handleAddToCart} />} />
+         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/cart" element={
           <Cart
             cartItems={cartItems}
@@ -95,6 +110,7 @@ function App() {   // You created a cartItems state
         } />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      </Elements>
     </div>
 
    

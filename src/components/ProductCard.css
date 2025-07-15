@@ -55,4 +55,9 @@
     transform: translateY(0);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   }
-  
+.product-card button + button {
+  margin-left: 12px; /* Adds horizontal space between the two buttons */
+}
+.product-card button {
+  margin-top: 12px;
+}
