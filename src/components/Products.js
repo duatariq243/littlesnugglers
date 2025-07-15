@@ -7,7 +7,7 @@ const productData = [
     id: 1,
     name: 'Baby Clothes',
     price:  29.99,
-    image: '/images/product1.jpg',
+     image: process.env.PUBLIC_URL + '/images/product1.jpg',
   },
   {
     id: 2,
