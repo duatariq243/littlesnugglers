@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/littlesnugglers/static/css/main.212b8ba5.css",
+    "main.css": "/littlesnugglers/static/css/main.0618c972.css",
     "main.js": "/littlesnugglers/static/js/main.af964be6.js",
     "index.html": "/littlesnugglers/index.html",
-    "main.212b8ba5.css.map": "/littlesnugglers/static/css/main.212b8ba5.css.map",
+    "main.0618c972.css.map": "/littlesnugglers/static/css/main.0618c972.css.map",
     "main.af964be6.js.map": "/littlesnugglers/static/js/main.af964be6.js.map"
   },
   "entrypoints": [
-    "static/css/main.212b8ba5.css",
+    "static/css/main.0618c972.css",
     "static/js/main.af964be6.js"
   ]
 }
